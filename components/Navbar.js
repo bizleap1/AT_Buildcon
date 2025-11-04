@@ -52,10 +52,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 z-60">
             <Image
-              src="/logo.png"
+              src="/Logo1.png"
               alt="A & T Buildcon Logo"
-              width={40}
-              height={40}
+              width={80}
+              height={80}
               className="transition-transform duration-500 hover:scale-110"
             />
             <span
@@ -63,7 +63,7 @@ export default function Navbar() {
                 scrolled ? "text-gray-800" : "text-white"
               }`}
             >
-              A & T Buildcon
+              
             </span>
           </Link>
 
