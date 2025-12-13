@@ -21,7 +21,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const phoneNumber = "918888888888"; // 🟢 Replace with your WhatsApp number
+    const phoneNumber = "919822706480"; // 🟢 Replace with your WhatsApp number
     const { name, phone, email, projectType, message } = formData;
 
     const text = `Hello A & T Buildcon! 👷‍♂️
@@ -43,7 +43,7 @@ Message: ${message}`;
     {
       icon: <FaPhoneAlt />,
       title: "Phone",
-      details: "+91 88888 88888",
+      details: "+91 98227 06480",
       description: "Mon-Sun, 8AM-8PM",
     },
     {
