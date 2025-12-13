@@ -5,43 +5,23 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Jain Brokers",
-      category: "Commercial",
+      title: "Sohamdhwani Smart Apartments",
+      category: "Residential",
       description:
-        "A modern commercial hub designed for efficiency and sustainability. Featuring advanced architecture, natural lighting, and optimized space planning for growing businesses.",
-      location: "Nagpur, Maharashtra",
-      image: "/projects/jain-brokers.jpg",
-      features: ["Modern Architecture", "Sustainable Design", "Optimal Space Planning"]
+        "Premium 3BHK smart apartments featuring modern architecture, intelligent home systems, and luxurious amenities. Designed for contemporary living with a focus on comfort, technology, and sustainable design in a prime Nagpur location.",
+      location: "Plot no 13, Sawarkar Nagar, Nagpur, Maharashtra",
+      image: "/projects/Sohamdhwani.png",
+      features: ["3BHK Luxury Apartments", "Smart Home Technology", "Modern Architecture", "Prime Location"]
     },
     {
       id: 2,
-      title: "Eefa Hotel",
-      category: "Hospitality",
+      title: "Tuljai Impreials",
+      category: "Residential",
       description:
-        "An elegant hospitality project crafted with a blend of luxury and functionality. The design emphasizes guest comfort, high-end interiors, and modern amenities.",
-      location: "Nagpur, Maharashtra",
-      image: "/projects/eefa-hotel.jpg",
-      features: ["Luxury Design", "Guest Comfort", "Modern Amenities"]
-    },
-    {
-      id: 3,
-      title: "Siddharth Group Corporate Office",
-      category: "Corporate Infrastructure",
-      description:
-        "A sophisticated office space reflecting professionalism and innovation. This project demonstrates our commitment to detail, sustainability, and efficiency in design.",
-      location: "Pune, Maharashtra",
-      image: "/projects/siddharth-group.jpg",
-      features: ["Professional Design", "Sustainable Features", "Efficient Layout"]
-    },
-    {
-      id: 4,
-      title: "Green Acres Residency",
-      category: "Residential Complex",
-      description:
-        "A premium residential community built amidst nature. Designed with spacious layouts, landscaped gardens, and eco-friendly construction practices.",
-      location: "Amravati, Maharashtra",
-      image: "/projects/green-acres.jpg",
-      features: ["Eco-friendly", "Landscaped Gardens", "Spacious Layouts"]
+        "Elegant 3BHK residential complex offering sophisticated living spaces with premium finishes. The project combines functional design with aesthetic appeal, providing residents with a comfortable and upscale lifestyle in Wanjari Nagar.",
+      location: "Plot No. 24, Wanjari Nagar, Nagpur, Maharashtra",
+      image: "/projects/Tuljai.png",
+      features: ["3BHK Premium Residences", "Sophisticated Design", "Premium Finishes", "Strategic Location"]
     },
   ];
 
@@ -92,7 +72,7 @@ export default function Projects() {
               Featured <span className="text-[#e67e22]">Projects</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover our landmark constructions that redefine excellence in residential, commercial, and hospitality sectors
+              Discover our landmark constructions that redefine excellence in residential development
             </p>
           </div>
 
@@ -105,20 +85,20 @@ export default function Projects() {
                   index % 2 !== 0 ? "lg:grid-flow-dense" : ""
                 }`}
               >
-                {/* Image */}
+                {/* Image Container - Clean and Full */}
                 <div className={`relative ${index % 2 !== 0 ? "lg:col-start-2" : ""}`}>
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={600}
-                      height={500}
-                      className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-100">
+                    <div className="relative w-full h-[400px] lg:h-[500px]">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-contain p-4 transform group-hover:scale-105 transition-transform duration-700"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
                   </div>
-                  {/* Accent Element */}
-                  <div className={`absolute -bottom-6 -right-6 w-24 h-24 bg-[#e67e22] rounded-2xl z-10 ${index % 2 !== 0 ? "lg:-left-6 lg:right-auto" : ""}`}></div>
+                  {/* Removed orange accent element */}
                 </div>
 
                 {/* Content */}
@@ -184,7 +164,6 @@ export default function Projects() {
             >
               Get Free Quote
             </a>
-            
           </div>
         </div>
       </section>

@@ -79,43 +79,81 @@ export default function HomePage() {
       </section>
 
       {/* ================= PROJECTS PREVIEW ================= */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Our <span className="text-[#e67e22]">Projects</span>
-          </h2>
-          <p className="text-gray-600 mb-12">
-            A glimpse of our most successful and innovative construction projects.
-          </p>
+      <section className="py-24 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6">
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {["p1.jpg", "p2.jpg", "p3.jpg"].map((img, index) => (
-              <div
-                key={index}
-                className="relative rounded-3xl overflow-hidden shadow-lg group"
-              >
-                <Image
-                  src={`/${img}`}
-                  alt={`Project ${index + 1}`}
-                  width={400}
-                  height={300}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white font-semibold text-lg">
-                  Project {index + 1}
-                </div>
-              </div>
-            ))}
+    {/* Section Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+        Our <span className="text-[#e67e22]">Projects</span>
+      </h2>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        Premium residential developments designed for modern living.
+      </p>
+    </div>
+
+    {/* Projects Grid */}
+    <div className="grid lg:grid-cols-2 gap-14 max-w-6xl mx-auto">
+      {[
+        {
+          img: "/projects/Sohamdhwani.png",
+          title: "Sohamdhwani Smart Apartments",
+          type: "3 BHK Smart Apartments",
+          location: "Plot No. 13, Sawarkar Nagar, Nagpur",
+        },
+        {
+          img: "/projects/Tuljai.png",
+          title: "Tuljai Imperials",
+          type: "3 BHK Premium Residences",
+          location: "Plot No. 24, Wanjari Nagar, Nagpur",
+        },
+      ].map((project, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-3xl shadow-xl overflow-hidden"
+        >
+          {/* 🔥 BIG IMAGE CONTAINER */}
+          <div className="relative w-full h-[520px] sm:h-[600px] bg-gray-100">
+            <Image
+              src={project.img}
+              alt={project.title}
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
 
-          <Link
-            href="/projects"
-            className="mt-12 inline-block bg-[#e67e22] hover:bg-[#d35400] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
-          >
-            View All Projects
-          </Link>
+          {/* CONTENT */}
+          <div className="p-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              {project.title}
+            </h3>
+
+            <p className="text-[#e67e22] font-semibold mb-3">
+              {project.type}
+            </p>
+
+            <div className="flex items-center justify-center gap-2 text-gray-600 text-sm">
+              <span className="text-lg">📍</span>
+              <span>{project.location}</span>
+            </div>
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="text-center mt-16">
+      <Link
+        href="/projects"
+        className="inline-block bg-[#e67e22] hover:bg-[#d35400] text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-orange-500/30"
+      >
+        View All Projects
+      </Link>
+    </div>
+
+  </div>
+</section>
 
       {/* ================= WHY CHOOSE US ================= */}
       <section className="py-20 bg-white">
