@@ -63,14 +63,14 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-[fadeIn_1s_ease-out_1.2s_both]">
           <Link
-            href="#projects"
+            href="projects"
             className="group relative bg-[#e67e22] hover:bg-[#cf711f] text-white font-bold px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-400/40 w-full sm:w-auto text-center"
           >
             Explore Projects
           </Link>
 
           <Link
-            href="#contact"
+            href="contact"
             className="group border border-white/70 hover:border-white bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base rounded-full backdrop-blur-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-white/20 w-full sm:w-auto text-center"
           >
             Get Free Quote
