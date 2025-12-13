@@ -11,7 +11,7 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: "📞", text: "+91 88888 88888" },
+    { icon: "📞", text: "+91 98227 06480" },
     { icon: "📧", text: "info@atbuildcon.com" },
     { icon: "🏢", text: "Nagpur, Maharashtra" },
   ];
@@ -97,7 +97,7 @@ export default function Footer() {
 
       {/* Floating WhatsApp Button with Proper Logo */}
       <a
-        href="https://wa.me/918888888888"
+        href="https://wa.me/919822706480"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 z-40 group"
