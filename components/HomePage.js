@@ -93,7 +93,7 @@ export default function HomePage() {
     </div>
 
     {/* Projects Grid */}
-    <div className="grid lg:grid-cols-2 gap-14 max-w-6xl mx-auto">
+    <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       {[
         {
           img: "/projects/Sohamdhwani.png",
@@ -107,34 +107,40 @@ export default function HomePage() {
           type: "3 BHK Premium Residences",
           location: "Plot No. 24, Wanjari Nagar, Nagpur",
         },
+        {
+          img: "/projects/Audumbar.png",
+          title: "Audumbar Sahniwas",
+          type: "4 BHK Premium Residences",
+          location:
+            "Plot No. 17, Vidhya Nihar Pratap Nagar, Nagpur",
+        },
       ].map((project, index) => (
         <div
           key={index}
-          className="bg-white rounded-3xl shadow-xl overflow-hidden"
+          className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
         >
-          {/* 🔥 BIG IMAGE CONTAINER */}
-          <div className="relative w-full h-[520px] sm:h-[600px] bg-gray-100">
+          {/* Image */}
+          <div className="relative w-full h-[320px] bg-gray-100">
             <Image
               src={project.img}
               alt={project.title}
               fill
               className="object-contain"
-              priority
             />
           </div>
 
-          {/* CONTENT */}
-          <div className="p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          {/* Content */}
+          <div className="p-6 text-center">
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
               {project.title}
             </h3>
 
-            <p className="text-[#e67e22] font-semibold mb-3">
+            <p className="text-[#e67e22] font-semibold mb-2">
               {project.type}
             </p>
 
             <div className="flex items-center justify-center gap-2 text-gray-600 text-sm">
-              <span className="text-lg">📍</span>
+              <span>📍</span>
               <span>{project.location}</span>
             </div>
           </div>
@@ -154,6 +160,7 @@ export default function HomePage() {
 
   </div>
 </section>
+
 
       {/* ================= WHY CHOOSE US ================= */}
       <section className="py-20 bg-white">

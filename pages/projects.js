@@ -23,6 +23,16 @@ export default function Projects() {
       image: "/projects/Tuljai.png",
       features: ["3BHK Premium Residences", "Sophisticated Design", "Premium Finishes", "Strategic Location"]
     },
+    {
+      id: 3,
+      title: "Audumbar Sahniwas",
+      category: "Residential",
+      description:
+        "Elegant 4BHK Luxurious Flat, Stylish Apartments in prime locations in Vidhya Nihar Pratap Nagar",
+      location: "Plot No. 17, Vidhya Nihar Pratap Nagar, Nagpur, Maharashtra",
+      image: "/projects/Audumbar.png",
+      features: ["4BHK Premium Residences", "Luxurious", "Premium Finishes", "Prime Location"]
+    },
   ];
 
   return (
